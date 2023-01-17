@@ -1,13 +1,25 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (i= 0; i < array.length; i++){
+    for(j= 1 + i; j < array.length; j++){
+      if(array[i]+ array[j]=== target){
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  O(n3)
 */
 
 /* 
   Add your pseudocode here
+  for every iteration let i start at index 0, while i is less than the length of the array, incrementing by one each iteration
+    for every iteration let j start at index 1 (j= i+1), while j is less than the length of the array, incrementing by one each iteration
+    if i + j === target return true
+  
 */
 
 /*
